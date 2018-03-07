@@ -1,8 +1,10 @@
-##socks5 proxy
+## socks5 proxy
 
 * add tcp connect timeout
 * add tcp read timeout
 * add tcp write timeout
+
+> socks5 添加 tcp 超时时间参数
 
 ```
 	dialer,err := proxy.SOCKS5("tcp",tmpProxy.host,nil,proxy.Direct,
