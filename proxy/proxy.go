@@ -12,7 +12,6 @@ import (
 	"net/url"
 	"os"
 	"sync"
-	"time"
 )
 
 // A Dialer is a means to establish a connection.
