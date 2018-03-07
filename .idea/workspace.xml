@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dd8f5aa3-5916-4b20-9535-19be2851412e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy.go" afterPath="$PROJECT_DIR$/proxy/proxy.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/socks5.go" afterPath="$PROJECT_DIR$/proxy/socks5.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,9 +31,11 @@
       <file leaf-file-name="socks5.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="364">
+              <caret line="83" column="12" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+              <folding>
+                <element signature="e#175#227#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -233,12 +234,12 @@
       <updated>1520387613894</updated>
       <workItem from="1520387615414" duration="10000" />
       <workItem from="1520387798836" duration="794000" />
-      <workItem from="1520388625500" duration="216000" />
+      <workItem from="1520388625500" duration="331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1020000" />
+    <option name="totallyTimeSpent" value="1135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="96" y="23" width="1080" height="829" extended-state="0" />
@@ -344,9 +345,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="364">
+          <caret line="83" column="12" lean-forward="false" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+          <folding>
+            <element signature="e#175#227#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

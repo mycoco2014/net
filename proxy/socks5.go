@@ -75,13 +75,13 @@ func (s *socks5) Dial(network, addr string, deadLine time.Time, readDeadLine tim
 	}
 
 	// add dead line for sockets
-	if deadLine != nil {
+	if !deadLine.IsZero() {
 		conn.SetDeadline(deadLine)
 	}
-	if readDeadLine != nil {
+	if !readDeadLine.IsZero() {
 		conn.SetReadDeadline(readDeadLine)
 	}
-	if writeDeadLine != nil {
+	if !writeDeadLine.IsZero() {
 		conn.SetWriteDeadline(writeDeadLine)
 	}
 
