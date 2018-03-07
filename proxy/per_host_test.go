@@ -40,10 +40,10 @@ func TestPerHost(t *testing.T) {
 	}
 
 	for _, addr := range expectedDef {
-		perHost.Dial("tcp", addr)
+		perHost.DialTimeout("tcp", addr, 3000)
 	}
 	for _, addr := range expectedBypass {
-		perHost.Dial("tcp", addr)
+		perHost.DialTimeout("tcp", addr, 3000)
 	}
 
 	if !reflect.DeepEqual(expectedDef, def.addrs) {

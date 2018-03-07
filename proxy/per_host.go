@@ -7,6 +7,7 @@ package proxy
 import (
 	"net"
 	"strings"
+	"time"
 )
 
 // A PerHost directs connections to a default Dialer unless the host name
@@ -32,13 +33,13 @@ func NewPerHost(defaultDialer, bypass Dialer) *PerHost {
 
 // Dial connects to the address addr on the given network through either
 // defaultDialer or bypass.
-func (p *PerHost) Dial(network, addr string) (c net.Conn, err error) {
+func (p *PerHost) DialTimeout(network, addr string, deadLine time.Duration) (c net.Conn, err error) {
 	host, _, err := net.SplitHostPort(addr)
 	if err != nil {
 		return nil, err
 	}
 
-	return p.dialerForRequest(host).Dial(network, addr)
+	return p.dialerForRequest(host).DialTimeout(network, addr,deadLine)
 }
 
 func (p *PerHost) dialerForRequest(host string) Dialer {

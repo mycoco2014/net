@@ -100,7 +100,7 @@ func TestFromURL(t *testing.T) {
 	if err != nil {
 		t.Fatalf("net.SplitHostPort failed: %v", err)
 	}
-	if c, err := proxy.Dial("tcp", "localhost:"+port); err != nil {
+	if c, err := proxy.DialTimeout("tcp", "localhost:"+port, 3000); err != nil {
 		t.Fatalf("FromURL.Dial failed: %v", err)
 	} else {
 		c.Close()
@@ -129,7 +129,7 @@ func TestSOCKS5(t *testing.T) {
 	if err != nil {
 		t.Fatalf("SOCKS5 failed: %v", err)
 	}
-	if c, err := proxy.Dial("tcp", endSystem.Addr().String()); err != nil {
+	if c, err := proxy.DialTimeout("tcp", endSystem.Addr().String(), 3000); err != nil {
 		t.Fatalf("SOCKS5.Dial failed: %v", err)
 	} else {
 		c.Close()
