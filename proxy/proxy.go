@@ -19,7 +19,6 @@ import (
 type Dialer interface {
 	// Dial
 	// Dial connects to the given address via the proxy.
-	Dial(network, addr string) (c net.Conn, err error)
 	DialTimeout(network, addr string, deadLine time.Duration) (c net.Conn, err error)
 }
 

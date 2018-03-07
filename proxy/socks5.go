@@ -66,7 +66,7 @@ var socks5Errors = []string{
 }
 
 // Dial connects to the address addr on the given network via the SOCKS5 proxy.
-func (s *socks5) Dial(network, addr string) (net.Conn, error) {
+func (s *socks5) DialTimeout(network, addr string) (net.Conn, error) {
 	switch network {
 	case "tcp", "tcp6", "tcp4":
 	default:

@@ -17,7 +17,3 @@ var Direct = direct{}
 func (direct) DialTimeout(network, addr string, deadLine time.Duration) (net.Conn, error) {
 	return net.DialTimeout(network, addr, deadLine)
 }
-
-func (direct) Dial(network, addr string) (net.Conn, error) {
-	return net.Dial(network, addr)
-}
