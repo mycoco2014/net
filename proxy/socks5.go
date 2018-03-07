@@ -14,11 +14,14 @@ import (
 
 // SOCKS5 returns a Dialer that makes SOCKSv5 connections to the given address
 // with an optional username and password. See RFC 1928 and RFC 1929.
-func SOCKS5(network, addr string, auth *Auth, forward Dialer) (Dialer, error) {
+func SOCKS5(network, addr string, auth *Auth, forward Dialer,deadLine time.Time, readDeadLine time.Time, writeDeadLine time.Time) (Dialer, error) {
 	s := &socks5{
 		network: network,
 		addr:    addr,
 		forward: forward,
+		deadLine: deadLine,
+		readDeadLine: readDeadLine,
+		writeDeadLine: writeDeadLine,
 	}
 	if auth != nil {
 		s.user = auth.User
@@ -32,6 +35,7 @@ type socks5 struct {
 	user, password string
 	network, addr  string
 	forward        Dialer
+	deadLine,readDeadLine,writeDeadLine time.Time
 }
 
 const socks5Version = 5
@@ -62,7 +66,7 @@ var socks5Errors = []string{
 }
 
 // Dial connects to the address addr on the given network via the SOCKS5 proxy.
-func (s *socks5) Dial(network, addr string, deadLine time.Time, readDeadLine time.Time, writeDeadLine time.Time ) (net.Conn, error) {
+func (s *socks5) Dial(network, addr string) (net.Conn, error) {
 	switch network {
 	case "tcp", "tcp6", "tcp4":
 	default:
@@ -75,14 +79,14 @@ func (s *socks5) Dial(network, addr string, deadLine time.Time, readDeadLine tim
 	}
 
 	// add dead line for sockets
-	if !deadLine.IsZero() {
-		conn.SetDeadline(deadLine)
+	if ! s.deadLine.IsZero() {
+		conn.SetDeadline(s.deadLine)
 	}
-	if !readDeadLine.IsZero() {
-		conn.SetReadDeadline(readDeadLine)
+	if ! s.readDeadLine.IsZero() {
+		conn.SetReadDeadline(s.readDeadLine)
 	}
-	if !writeDeadLine.IsZero() {
-		conn.SetWriteDeadline(writeDeadLine)
+	if ! s.writeDeadLine.IsZero() {
+		conn.SetWriteDeadline(s.writeDeadLine)
 	}
 
 	if err := s.connect(conn, addr); err != nil {
