@@ -125,7 +125,7 @@ func TestSOCKS5(t *testing.T) {
 	wg.Add(1)
 	go socks5Gateway(t, gateway, endSystem, socks5IP4, &wg)
 
-	proxy, err := SOCKS5("tcp", gateway.Addr().String(), nil, Direct, 0,0,0)
+	proxy, err := SOCKS5("tcp", gateway.Addr().String(), nil, Direct, 0,0)
 	if err != nil {
 		t.Fatalf("SOCKS5 failed: %v", err)
 	}

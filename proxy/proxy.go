@@ -82,7 +82,7 @@ func FromURL(u *url.URL, forward Dialer) (Dialer, error) {
 
 	switch u.Scheme {
 	case "socks5":
-		return SOCKS5("tcp", u.Host, auth, forward, 0,0,0)
+		return SOCKS5("tcp", u.Host, auth, forward, 0,0)
 	}
 
 	// If the scheme doesn't match any of the built-in schemes, see if it

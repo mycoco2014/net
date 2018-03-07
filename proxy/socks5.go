@@ -14,12 +14,11 @@ import (
 
 // SOCKS5 returns a Dialer that makes SOCKSv5 connections to the given address
 // with an optional username and password. See RFC 1928 and RFC 1929.
-func SOCKS5(network, addr string, auth *Auth, forward Dialer,deadLineVal time.Duration, readDeadLineVal time.Duration, writeDeadLineVal time.Duration) (Dialer, error) {
+func SOCKS5(network, addr string, auth *Auth, forward Dialer,readDeadLineVal time.Duration, writeDeadLineVal time.Duration) (Dialer, error) {
 	s := &socks5{
 		network: network,
 		addr:    addr,
 		forward: forward,
-		deadLineVal: deadLineVal,
 		readDeadLineVal: readDeadLineVal,
 		writeDeadLineVal: writeDeadLineVal,
 	}
@@ -35,7 +34,7 @@ type socks5 struct {
 	user, password string
 	network, addr  string
 	forward        Dialer
-	deadLineVal,readDeadLineVal,writeDeadLineVal time.Duration
+	readDeadLineVal,writeDeadLineVal time.Duration
 }
 
 const socks5Version = 5
@@ -66,13 +65,13 @@ var socks5Errors = []string{
 }
 
 // Dial connects to the address addr on the given network via the SOCKS5 proxy.
-func (s *socks5) DialTimeout(network, addr string) (net.Conn, error) {
+func (s *socks5) DialTimeout(network, addr string, deadLine time.Duration) (net.Conn, error) {
 	switch network {
 	case "tcp", "tcp6", "tcp4":
 	default:
 		return nil, errors.New("proxy: no support for SOCKS5 proxy connections of type " + network)
 	}
-	conn, err := s.forward.DialTimeout(s.network, s.addr, s.deadLineVal)
+	conn, err := s.forward.DialTimeout(s.network, s.addr, deadLine)
 	if err != nil {
 		return nil, err
 	}
