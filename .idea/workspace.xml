@@ -43,8 +43,8 @@
       <file leaf-file-name="socks5.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="88" column="102" lean-forward="false" selection-start-line="88" selection-start-column="102" selection-end-line="88" selection-end-column="102" />
+            <state relative-caret-position="285">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
                 <element signature="e#175#227#0" expanded="true" />
               </folding>
@@ -97,7 +97,7 @@
     <option name="jreName" value="#JAVA_INTERNAL" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="324" />
+    <option name="x" value="55" />
     <option name="y" value="23" />
     <option name="width" value="1251" />
     <option name="height" value="829" />
@@ -263,15 +263,15 @@
       <updated>1520387613894</updated>
       <workItem from="1520387615414" duration="10000" />
       <workItem from="1520387798836" duration="794000" />
-      <workItem from="1520388625500" duration="1555000" />
+      <workItem from="1520388625500" duration="1877000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2359000" />
+    <option name="totallyTimeSpent" value="2681000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="324" y="23" width="1251" height="829" extended-state="0" />
+    <frame x="55" y="23" width="1251" height="829" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -378,8 +378,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="88" column="102" lean-forward="false" selection-start-line="88" selection-start-column="102" selection-end-line="88" selection-end-column="102" />
+        <state relative-caret-position="285">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
             <element signature="e#175#227#0" expanded="true" />
           </folding>
