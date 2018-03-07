@@ -2,5 +2,5 @@
 last-change
 /.idea/*
 /.idea/*.xml
-.idea/
 .DS_Store
+.idea/
