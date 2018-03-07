@@ -61,7 +61,7 @@ var socks5Errors = []string{
 }
 
 // Dial connects to the address addr on the given network via the SOCKS5 proxy.
-func (s *socks5) Dial(network, addr string) (net.Conn, error) {
+func (s *socks5) Dial(network, addr string, deadLine time.Time, readDeadLine time.Time, writeDeadLine time.Time ) (net.Conn, error) {
 	switch network {
 	case "tcp", "tcp6", "tcp4":
 	default:
@@ -72,6 +72,18 @@ func (s *socks5) Dial(network, addr string) (net.Conn, error) {
 	if err != nil {
 		return nil, err
 	}
+
+	// add dead line for sockets
+	if deadLine != nil {
+		conn.SetDeadline(deadLine)
+	}
+	if readDeadLine != nil {
+		conn.SetReadDeadline(readDeadLine)
+	}
+	if writeDeadLine != nil {
+		conn.SetWriteDeadline(writeDeadLine)
+	}
+
 	if err := s.connect(conn, addr); err != nil {
 		conn.Close()
 		return nil, err
