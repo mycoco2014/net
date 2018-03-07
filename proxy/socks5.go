@@ -72,15 +72,9 @@ func (s *socks5) Dial(network, addr string) (net.Conn, error) {
 	default:
 		return nil, errors.New("proxy: no support for SOCKS5 proxy connections of type " + network)
 	}
-
-	conn, err := s.forward.Dial(s.network, s.addr)
+	conn, err := s.forward.DialTimeout(s.network, s.addr, s.deadLineVal)
 	if err != nil {
 		return nil, err
-	}
-
-	// add dead line for sockets
-	if s.deadLineVal > 0 {
-		conn.SetDeadline( time.Now().Add(time.Duration(s.deadLineVal)))
 	}
 	if s.readDeadLineVal > 0 {
 		conn.SetReadDeadline(time.Now().Add(time.Duration(s.readDeadLineVal)))

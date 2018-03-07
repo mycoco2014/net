@@ -12,12 +12,13 @@ import (
 	"net/url"
 	"os"
 	"sync"
+	"time"
 )
 
 // A Dialer is a means to establish a connection.
 type Dialer interface {
 	// Dial connects to the given address via the proxy.
-	Dial(network, addr string) (c net.Conn, err error)
+	DialTimeout(network, addr string, deadLine time.Duration) (c net.Conn, err error)
 }
 
 // Auth contains authentication parameters that specific Dialers may require.

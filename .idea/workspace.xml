@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd8f5aa3-5916-4b20-9535-19be2851412e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/direct.go" afterPath="$PROJECT_DIR$/proxy/direct.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/proxy.go" afterPath="$PROJECT_DIR$/proxy/proxy.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proxy/socks5.go" afterPath="$PROJECT_DIR$/proxy/socks5.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,33 +20,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="proxy.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="proxy.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxy/proxy.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="82" column="65" lean-forward="false" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
+            <state relative-caret-position="147">
+              <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
               <folding>
-                <element signature="e#306#358#0" expanded="true" />
+                <element signature="e#306#366#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proxy_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proxy/proxy_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="118" column="23" lean-forward="true" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="socks5.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="socks5.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+            <state relative-caret-position="147">
+              <caret line="74" column="42" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
               <folding>
                 <element signature="e#175#227#0" expanded="true" />
               </folding>
@@ -55,8 +47,8 @@
       <file leaf-file-name="direct.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/proxy/direct.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -67,6 +59,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Dial</find>
+      <find>conn</find>
       <find>SOCKS5</find>
     </findStrings>
   </component>
@@ -82,8 +75,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/proxy/proxy_test.go" />
-        <option value="$PROJECT_DIR$/proxy/socks5.go" />
+        <option value="$PROJECT_DIR$/proxy/direct.go" />
         <option value="$PROJECT_DIR$/proxy/proxy.go" />
+        <option value="$PROJECT_DIR$/proxy/socks5.go" />
       </list>
     </option>
   </component>
@@ -263,12 +257,12 @@
       <updated>1520387613894</updated>
       <workItem from="1520387615414" duration="10000" />
       <workItem from="1520387798836" duration="794000" />
-      <workItem from="1520388625500" duration="2022000" />
+      <workItem from="1520388625500" duration="2875000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2826000" />
+    <option name="totallyTimeSpent" value="3679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="23" width="1251" height="829" extended-state="0" />
@@ -321,7 +315,7 @@
         <state relative-caret-position="90">
           <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="34" />
           <folding>
-            <element signature="e#306#358#0" expanded="true" />
+            <element signature="e#306#366#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -350,38 +344,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/proxy/direct.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/proxy/proxy_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
-          <caret line="118" column="23" lean-forward="true" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+          <caret line="118" column="23" lean-forward="false" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy/direct.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
-          <folding>
-            <element signature="e#175#227#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/proxy/proxy.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="82" column="65" lean-forward="false" selection-start-line="82" selection-start-column="65" selection-end-line="82" selection-end-column="65" />
+        <state relative-caret-position="147">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding>
-            <element signature="e#306#358#0" expanded="true" />
+            <element signature="e#306#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy/socks5.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="74" column="42" lean-forward="false" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
+          <folding>
+            <element signature="e#175#227#0" expanded="true" />
           </folding>
         </state>
       </provider>
